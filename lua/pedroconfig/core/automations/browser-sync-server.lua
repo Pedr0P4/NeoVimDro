@@ -7,7 +7,7 @@ function start_browser_sync()
   if result == "" then
 	-- Cria um terminal para manter o servidor ativo.
 	vim.cmd('FloatermNew --name=server --height=30 --width=80 --position=topleft')
-    vim.cmd("FloatermSend --name=server browser-sync start --server " .. project_dir .. " --files '" .. project_dir .. "/*.html," .. project_dir .. "/*.css," .. project_dir .. "/*.js' --port 3000 &")
+    vim.cmd("FloatermSend --name=server browser-sync start --server " .. project_dir .. " --files '" .. project_dir .. "/*.html," .. project_dir .. "/css/*.css," .. project_dir .. "/js/*.js' --port 3000 &")
 	vim.cmd("FloatermToggle!")
     print("Servidor browser-sync iniciado.")	
   else
